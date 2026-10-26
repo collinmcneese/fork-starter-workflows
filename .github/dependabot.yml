@@ -1,16 +1,71 @@
+
 # To get started with Dependabot version updates, you'll need to specify which
 # package ecosystems to update and where the package manifests are located.
 # Please see the documentation for all configuration options:
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
+
+multi-ecosystem-groups:
+  starter-workflows:
+    schedule:
+      interval: "weekly"
+
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
+
+  - package-ecosystem: "github-actions"
+    name: "automation-workflows"
+    directory: "/automation"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    multi-ecosystem-group: "starter-workflows"
+    patterns:
+    - "github-actions"
+
+  - package-ecosystem: "github-actions"
+    name: "ci-workflows"
+    directory: "/ci"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    multi-ecosystem-group: "starter-workflows"
+    patterns:
+    - "github-actions"
+
+  - package-ecosystem: "github-actions"
+    name: "code-scanning-workflows"
+    directory: "/code-scanning"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    multi-ecosystem-group: "starter-workflows"
+    patterns:
+    - "github-actions"
+
+  - package-ecosystem: "github-actions"
+    name: "pages-workflows"
+    directory: "/pages"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    multi-ecosystem-group: "starter-workflows"
+    patterns:
+    - "github-actions"
