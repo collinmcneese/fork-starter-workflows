@@ -34,7 +34,7 @@ updates:
       default-days: 7
     multi-ecosystem-group: "starter-workflows"
     patterns:
-    - "github-actions"
+    - "*"
 
   - package-ecosystem: "github-actions"
     directory: "/ci"
@@ -44,7 +44,7 @@ updates:
       default-days: 7
     multi-ecosystem-group: "starter-workflows"
     patterns:
-    - "github-actions"
+    - "*"
 
   - package-ecosystem: "github-actions"
     directory: "/code-scanning"
@@ -54,7 +54,7 @@ updates:
       default-days: 7
     multi-ecosystem-group: "starter-workflows"
     patterns:
-    - "github-actions"
+    - "*"
 
   - package-ecosystem: "github-actions"
     directory: "/pages"
@@ -64,4 +64,4 @@ updates:
       default-days: 7
     multi-ecosystem-group: "starter-workflows"
     patterns:
-    - "github-actions"
+    - "*"
