@@ -27,7 +27,6 @@ updates:
       default-days: 7
 
   - package-ecosystem: "github-actions"
-    name: "automation-workflows"
     directory: "/automation"
     schedule:
       interval: "weekly"
@@ -38,7 +37,6 @@ updates:
     - "github-actions"
 
   - package-ecosystem: "github-actions"
-    name: "ci-workflows"
     directory: "/ci"
     schedule:
       interval: "weekly"
@@ -49,7 +47,6 @@ updates:
     - "github-actions"
 
   - package-ecosystem: "github-actions"
-    name: "code-scanning-workflows"
     directory: "/code-scanning"
     schedule:
       interval: "weekly"
@@ -60,7 +57,6 @@ updates:
     - "github-actions"
 
   - package-ecosystem: "github-actions"
-    name: "pages-workflows"
     directory: "/pages"
     schedule:
       interval: "weekly"
